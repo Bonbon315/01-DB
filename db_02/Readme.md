@@ -336,14 +336,14 @@ WHERE GenreId =
 	(SELECT GenreId 
      FROM tracks 
      GROUP BY GenreId 
-     ORDER BY COUNT(*) DESC 
+     ORDER BY COUNT(*) ASC 
      LIMIT 1);
 ```
 
 ```
 Name
-----
-Rock
+-----
+Opera
 ```
 
 
