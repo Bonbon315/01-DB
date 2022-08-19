@@ -100,6 +100,7 @@ WHERE BillingPostalCode is not NULL;
 ### 7. 송장(invoices) 테이블에서 `BillingState`가 `NULL` 인 데이터를 출력하세요.
 
 | 단, `InvoiceDate`를 기준으로 내림차순으로 5개까지 출력하세요.
+
 ```sql
 SELECT *
 FROM invoices
@@ -165,10 +166,10 @@ ORDER BY CustomerId ASC;
 | 단, 각각의 컬렴명을 `고객 수`,`나라`로 출력하고, 고객 수 상위 5개의 나라만 출력하세요.
 
 ```sql
-SELECT  COUNT(*) '고객 수', Country '나라'
+SELECT  COUNT(*) "고객 수", Country '나라'
 FROM customers
 GROUP BY Country
-ORDER BY COUNT(*) DESC
+ORDER BY "고객 수" DESC
 LIMIT 5;
 ```
 
